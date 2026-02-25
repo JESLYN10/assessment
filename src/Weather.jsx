@@ -15,7 +15,7 @@ export default function Weather(){
 
     const fetchData=async()=>{
         try{
-           const res=await axios.get(`${API}/india/weather/${city}`,{Headers:{Authorization:"sk-live-YoOf4HXP0I29G0Z6UtTkPAUXWBypMfaxn43ybFcU"}});
+           const res=await axios.get(`${API}/india/weather/${city}`,{headers:{Authorization:"sk-live-YoOf4HXP0I29G0Z6UtTkPAUXWBypMfaxn43ybFcU"}});
            setWeatherData(res.data.slice(0,5));
         }
         catch{(err)=>{
